@@ -7,3 +7,8 @@
 5) 
 6)
 7) [mark_chess.jl](https://github.com/aCurufinW/julia/blob/main/mark_chess.jl)
+8)
+9)
+10)
+11)
+12) [mark_chess_n.jl](https://github.com/aCurufinW/julia/blob/main/mark_chess_n.jl)
