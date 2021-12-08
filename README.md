@@ -5,7 +5,7 @@
 3) [mark_field.jl](https://github.com/aCurufinW/julia/blob/main/mark_field.jl)
 4) [mark_Ost_field](https://github.com/aCurufinW/julia/blob/main/mark_Ost_field.jl)
 5) [mark_corners.jl](https://github.com/aCurufinW/julia/blob/main/mark_corners.jl)
-6)
+6) [mark_little_perimeter.jl](https://github.com/aCurufinW/julia/blob/main/mark_little_perimeter.jl)
 7) [mark_chess.jl](https://github.com/aCurufinW/julia/blob/main/mark_chess.jl)
 8)
 9)
