@@ -1,7 +1,7 @@
 using HorizonSideRobots
 
 
-function mark_kross(r::Robot)
+function mark_cross(r::Robot)
     for side in 0:3
         move_forward!(r, side)
         return_to_start!(r, change_side(side))
@@ -26,4 +26,4 @@ function change_side(side)
     return mod(side+2, 4)
 end
 
-mark_kross(r)
+mark_cross(r)
