@@ -12,7 +12,7 @@
 10) [average_temp.jl](https://github.com/aCurufinW/julia/blob/main/average_temp.jl)
 11) 
 12) [mark_chess_n.jl](https://github.com/aCurufinW/julia/blob/main/mark_chess_n.jl)
-13)
+13) [mark_x_cross.jl](https://github.com/aCurufinW/julia/blob/main/mark_x_cross.jl)
 14)
 15)
 16)
