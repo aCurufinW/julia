@@ -10,7 +10,7 @@
 8) [endless_border.jl](https://github.com/aCurufinW/julia/blob/main/endless_border.jl)
 9) [find_marker.jl](https://github.com/aCurufinW/julia/blob/main/find_marker.jl)
 10) [average_temp.jl](https://github.com/aCurufinW/julia/blob/main/average_temp.jl)
-11) [mark_cells.jl](https://github.com/aCurufinw/julia/blob/main/mark.cells.jl)
+11) [mark_cells.jl](https://github.com/aCurufinw/julia/blob/main/mark_cells.jl)
 12) [mark_chess_n.jl](https://github.com/aCurufinW/julia/blob/main/mark_chess_n.jl)
 13) [mark_x_cross.jl](https://github.com/aCurufinW/julia/blob/main/mark_x_cross.jl)
 14)
