@@ -103,19 +103,6 @@ function return_to_start!(r, counters)   # возвращаемся в нача�
         end
     end
 end
-
-
-function return_to_start!(r::Robot, count_W::Int,count_S::Int)
-    while !isborder(r,HorizonSide(2))
-        move!(r, HorizonSide(2))
-    end
-    for i in 1:count_W
-        move!(r, HorizonSide(3))
-    end
-    for j in 1:count_S
-        move!(r, HorizonSide(0))
-    end
-end
  
 
 mark_little_perimeter!(r)
