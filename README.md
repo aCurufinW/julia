@@ -13,7 +13,7 @@
 11) [mark_cells.jl](https://github.com/aCurufinw/julia/blob/main/mark_cells.jl)
 12) [mark_chess_n.jl](https://github.com/aCurufinW/julia/blob/main/mark_chess_n.jl)
 13) [mark_x_cross.jl](https://github.com/aCurufinW/julia/blob/main/mark_x_cross.jl)
-14) [mark_cross_with_borders.jl](https://github.com/aCurufinW/julia/blob/main/mark_cross_wuth_borders.jl)
+14) [mark_cross_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_cross_wuth_barriers.jl)
 15)
 16)
 17)
