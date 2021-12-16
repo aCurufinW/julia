@@ -15,7 +15,7 @@
 13) [mark_x_cross.jl](https://github.com/aCurufinW/julia/blob/main/mark_x_cross.jl)
 14) [mark_cross_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_cross_with_barriers.jl)
 15) [mark_perimeter_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_perimeter_with_barriers.jl)
-16)
+16) [mark_field_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_field_with_barriers.jl)
 17)
 18) [mark_corners_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_corners_with_barriers.jl)
 19)
