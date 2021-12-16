@@ -17,6 +17,6 @@
 15) [mark_perimeter_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_perimeter_with_barriers.jl)
 16)
 17)
-18)
+18) [mark_corners_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_corners_with_barriers.jl)
 19)
-20) [mark_corners_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_corners_with_barriers.jl)
+20) 
