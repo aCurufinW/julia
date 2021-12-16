@@ -19,4 +19,4 @@
 17)
 18)
 19)
-20)
+20) [mark_corners_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_corners_with_barriers.jl)
