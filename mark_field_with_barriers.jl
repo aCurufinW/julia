@@ -1,77 +1,72 @@
 using HorizonSideRobots
 
 function mark_field_with_barriers!(r)
-    counters = move_to_corner!(r)
-    height = move_and_count!(r)
-    move_to_last_corner!(r, height)
+    counters = move_to_corner!(r)         # запомним исходное положение
+    putmarker!(r)
+    move_forward!(r, Sud)                 # спустимся в нижний угол
+    row_length = move_forward!(r, Ost)    # первый проход
+    move!(r, Nord)
+    move_by_snake!(r, row_length)
     move_to_corner!(r)
     return_to_start!(r, counters)
 end
 
 
-function move_and_count!(r)
+
+function move_by_snake!(r, counter)            # двигаемся "змейкой"
+    direction = 1
+    while true 
+        i = 0
+        while i != counter-1                   # отмечаем на одну клетку меньше, потому что
+            if !isborder(r, HorizonSide(direction))   # левый столбец уже помечен
+                putmarker!(r)
+                move!(r, HorizonSide(direction))
+                i += 1
+                putmarker!(r)
+            else                                # если встречается преграда - огибаем
+                i += move_through_barrier!(r, direction)
+                i+=1
+            end
+            if i==counter-1
+                putmarker!(r)
+            end
+        end
+        if !isborder(r,Nord)
+            move!(r, Nord)
+        else
+            return 0
+        end
+        direction = (direction+2)%4
+    end    
+end
+
+
+
+function move_forward!(r, side)          # движение с маркировкой
     c = 0
-    while !isborder(r, Sud)
-        putmarker!(r)
-        move!(r, Sud)
+    while !isborder(r, side)
+        move!(r, side)
         c+=1
+        putmarker!(r)
     end
-    putmarker!(r)
     return c
 end
 
 
-function move_to_last_corner!(r, height)
-    direction = 0
-    move!(r, Ost)
-    while true
-        i = 0
-        while i!=height
-            if (isborder(r, Nord) && isborder(r, Ost)) # конец
-                return 0
-            end
-            if !isborder(r,HorizonSide(direction))    # маркируем свободные клетки до границы
-                putmarker!(r)
-                move!(r, HorizonSide(direction))
-                i+=1
-            else
-                putmarker!(r)
-                if i!=height-1
-                    i+=move_through_barrier!(r, direction)
-                end
-                while !isborder(r, HorizonSide(direction))
-                    move!(r, HorizonSide(direction))
-                    putmarker!(r)
-                    i+=1
-                end
-                if i == height-1
-                    putmarker!(r)
-                    i+=1
-                end
-            end
-        end
-        putmarker!(r)
-        direction = (direction+2)%4
-        if !isborder(r, Ost)
-            move!(r, Ost)
-        end
-    end
-end
-
-function move_through_barrier!(r, side)
+function move_through_barrier!(r, side)   # огибаем преграду
     counter = 0
     counter1 = 0
     while isborder(r, HorizonSide(side))
-        move!(r, Ost)
+        move!(r, Nord)
         counter+=1
     end
     move!(r, HorizonSide(side))
-    while isborder(r, West)
+    while isborder(r, Sud)
         move!(r, HorizonSide(side))
         counter1 += 1
     end
     for i in 0:counter-1
-        move!(r, West)
+        move!(r, Sud)
     end
     putmarker!(r)
     return(counter1)
@@ -116,18 +111,5 @@ function return_to_start!(r, counters)   # возвращаемся в нача�
     end
 end
 
-
-function return_to_start!(r::Robot, count_W::Int,count_S::Int)
-    while !isborder(r,HorizonSide(2))
-        move!(r, HorizonSide(2))
-    end
-    for i in 1:count_W
-        move!(r, HorizonSide(3))
-    end
-    for j in 1:count_S
-        move!(r, HorizonSide(0))
-    end
-end
- 
 
 mark_field_with_barriers!(r)
