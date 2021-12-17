@@ -20,5 +20,6 @@
 18) [mark_corners_with_barriers.jl](https://github.com/aCurufinW/julia/blob/main/mark_corners_with_barriers.jl)
 19) 
 20) [count_horizontal_barriers.jl](https://github.com/aCurufinw/julia/blob/main/count_horizontal_barriers.jl)
-21)
+21) [count_hor-ver_barriers.jl](https://github.com/aCurufinW/julia/blob/main/count_hor-ver_barriers.jl)
 22) [count_square_barriers.jl](https://github.com/aCurufinW/julia/blob/main/count_square_barriers.jl)
+23) [count_all_barriers.jl](https://github.com/aCurufinW/julia/blob/main/count_all_barriers.jl)
